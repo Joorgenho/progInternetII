@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMMotores - Exercicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="estilos/geral.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="estilos/produtos.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body id="produtos">
+    <div id="tudo">
+        <header>
+            <h1>BMMotores <strong>Exercício</strong></h1>
+            <p class="pular"><a href="#principal">pular para conteúdo principal</a></p>
+            <nav>
+                <a href="#" id="in">Home</a>
+                <a href="#" id="qs">Quem somos</a>
+                <a href="#" id="pr">Produtos</a>
+                <a href="#" id="co">Contato</a>
+            </nav>
+            <form method="GET" action="#" id="busca">
+                <label> Buscar
+                <input type="text" name="busca" />                    
+            </label>
+                <input type="submit" value="OK" id="submit" />
+            </form>
+        </header>
+        <main>
+        
+        </main>
+        <aside id="auxiliar">
+            <dl>
+                <dt>Motores Leves</dt>
+                <dd><a href="#" id="modelo-ragon-wz">Modelo Ragon WZ</a></dd>
+                <dd><a href="#" id="modelo-ragon-ty">Modelo Ragon TY</a></dd>
+                <dd><a href="#" id="modelo-delta">Modelo Delta</a></dd>
+
+                <dt>Motores Médios</dt>
+                <dd><a href="#" id="modelo-dyna">Modelo Dyna</a></dd>
+                <dd><a href="#" id="modelo-tork-gu">Modelo Tork GU</a></dd>
+                <dd><a href="#" id="modelo-tork-ja">Modelo Tork JA</a></dd>
+
+                <dt>Motores Grandes</dt>
+                <dd><a href="#" id="modelo-combo-alfa">Modelo Combo Alfa</a></dd>
+                <dd><a href="#" id="modelo-combo-beta">Modelo Combo Beta</a></dd>
+            </dl>
+        </aside>
+
+        <footer id="rodape">
+            <p>Baseado no <a href="#">BMMotores do Maujor.</a></p>
+        </footer>
+    </div>
+</body>
+<script>
+    let motor = {
+        nome: "Motor Ragon WZ",
+        descricao: "Cabeçotes individuais",
+        uso: "veicular",
+        imagem: "img/motor-1.jpg"
+    }
+    let template = ` 
+    <dl>
+        <dd>
+            <figure>
+                <img src="${motor.imagem}" alt="Motor 1l" />
+            </figure>
+        </dd>
+        <dt>
+            <a href="#"> ${motor.nome} </a>
+        </dt>
+        <dd>
+            ${motor.descricao}
+        </dd>
+        <dd>
+            Uso: ${motor.uso}
+        </dd>
+    </dl>
+    `;
+    document.querySelector("main").innerHTML = template
+</script>
+
+</html>
